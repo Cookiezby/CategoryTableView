@@ -2,7 +2,8 @@
 
 
 ```ObjectiveC
-CategoryTableViewController* categoryVC = [[CategoryTableViewController alloc]init];[categoryVC setCategroyArray:[PlistReader getArrayFromPlist:@"category"]];
+CategoryTableViewController* categoryVC = [[CategoryTableViewController alloc]init];
+[categoryVC setCategroyArray:[PlistReader getArrayFromPlist:@"category"]];
 categoryVC.delegate = self;
 [self.navigationController pushViewController:categroyVC animated:YES];
 ```
