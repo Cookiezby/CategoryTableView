@@ -10,7 +10,7 @@
 
 @protocol CategoryTableViewDelegate <NSObject>
 
-@required - (void)setCategroy:(NSString*)categroy;
+@required - (void)setCategroy:(NSString*)category;
 
 @end
 
@@ -20,5 +20,7 @@
 - (void)setCategroyArray:(NSArray*)array;
 
 @property (nonatomic) id<CategoryTableViewDelegate> delegate;
+
+@property (nonatomic)NSString* navigationTitle;
 
 @end

@@ -13,6 +13,7 @@
 @property(nonatomic)UITableView* tableView;
 @property(nonatomic)NSArray* categroyArray;
 
+
 @end
 
 @implementation CategoryTableViewController
@@ -23,6 +24,9 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    self.navigationItem.title = self.navigationTitle;
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -44,6 +48,7 @@
     if(subcat.count > 0){
         CategoryTableViewController* categoryVC = [[CategoryTableViewController alloc]init];
         categoryVC.delegate = self.delegate;
+        categoryVC.navigationTitle = dic[@"name"];
         [categoryVC setCategroyArray:subcat];
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         [self.navigationController pushViewController:categoryVC animated:YES];

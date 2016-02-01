@@ -7,13 +7,13 @@ categoryVC.delegate = self;
 [self.navigationController pushViewController:categroyVC animated:YES];
 ```
 
-You need to put this code in this method 
+You need to put this code in this method.
 
 ```ObjectiveC
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 ```
 
-and implement the method like this
+and implement the method like this:
 
 ```ObjectiveC
 - (void)setCategroy:(NSString *)categroy{
